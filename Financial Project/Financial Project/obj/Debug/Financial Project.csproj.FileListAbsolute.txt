@@ -1,0 +1,12 @@
+C:\Data\FinancialProject\Financial Project\Financial Project\bin\Debug\Financial Project.exe.config
+C:\Data\FinancialProject\Financial Project\Financial Project\bin\Debug\Financial Project.exe
+C:\Data\FinancialProject\Financial Project\Financial Project\bin\Debug\Financial Project.pdb
+C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial Project.csprojResolveAssemblyReference.cache
+C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial_Project.Default.resources
+C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial_Project.Properties.Resources.resources
+C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial Project.csproj.GenerateResource.cache
+C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial Project.csproj.CoreCompileInputs.cache
+C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial Project.exe
+C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial Project.pdb
+C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial_Project.ExitConf.resources
+C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial_Project.Compound.resources
