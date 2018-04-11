@@ -38,46 +38,85 @@ namespace Financial_Project
                 double timesPeryear;
                 double years = double.Parse(tbYears.Text);
                 double deposits;
+                double depAmount;
                 double Amount;
                 double TotalAmount;
-                
+                double depAmountSub;
+                double depAmountDiv;
+                double depAmountMult;
+                double Deposits = 0;
+
+
+
+                deposits = double.Parse(tbContribute.Text);
+
 
                 if (cbInstance.Text == "Annually")
                 {
-                    timesPeryear = 1.00;
+                    timesPeryear = 1; Deposits = (deposits * 12);
                 }
-                else if (cbInstance.Text == "SemiAnnually")
+                else if (cbInstance.Text == "Semiannually")
                 {
-                    timesPeryear = 2.00;
+                    timesPeryear = 2; Deposits = (deposits * 6);
                 }
                 else if (cbInstance.Text == "Quarterly")
                 {
-                    timesPeryear = 4.00;
+                    timesPeryear = 4; Deposits = (deposits * 3);
                 }
                 else if (cbInstance.Text == "Monthly")
                 {
-                    timesPeryear = 12.00;
+                    timesPeryear = 12; Deposits = deposits;
                 }
                 else 
                 {
-                    timesPeryear = 365.00;
+                    timesPeryear = 365; Deposits = ((deposits * 12) / 365);
                 }
 
-                deposits = double.Parse(tbContribute.Text) * 12;
+                
+               
 
                 double body = 1 + (interest / timesPeryear);
+                double exp = (timesPeryear * years);
+                double interestFreq = (interest / timesPeryear);
 
-                double exp = timesPeryear * years;
 
-                Amount = principal * Math.Pow(body, exp );
+
+
+                depAmount =  Math.Pow(body, exp);
+                depAmountSub = depAmount - 1;
+                depAmountMult = depAmountSub * Deposits;
+                depAmountDiv = (depAmountMult / interestFreq);
+                Amount = principal * Math.Pow(body, exp);
                 
-                lblOut.Text = "Your balance after" + " " + tbYears.Text + " " + "years" + " " + "is" + " " + Amount.ToString("C");
+                TotalAmount = (Amount + depAmountDiv);
+
+                lblOut.Text = "Your balance after" + " " + tbYears.Text + " " + "years" + " " + "is" + " " + TotalAmount.ToString("C");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Closes form and opens default
+
+            Default frmDefault = new Default();
+            this.Close();
+            frmDefault.Show();
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbInterest_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
