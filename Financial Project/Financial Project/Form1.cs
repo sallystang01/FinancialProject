@@ -41,9 +41,15 @@ namespace Financial_Project
         private void btnExit_Click(object sender, EventArgs e)
         {
             //Exits the application
-            ExitConf frmExit = new ExitConf();
-            frmExit.Show();
+
             
+            DialogResult dr = MessageBox.Show("Do you really want to exit?", "Exiting...", MessageBoxButtons.YesNo);
+
+            if (dr == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+                                   
         }
     }
 }

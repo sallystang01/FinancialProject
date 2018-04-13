@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
             this.btnCompound = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMortgage = new System.Windows.Forms.Button();
@@ -38,21 +39,27 @@
             // 
             // btnCompound
             // 
-            this.btnCompound.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompound.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCompound.FlatAppearance.BorderSize = 0;
+            this.btnCompound.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCompound.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnCompound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompound.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompound.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCompound.Location = new System.Drawing.Point(22, 33);
             this.btnCompound.Name = "btnCompound";
             this.btnCompound.Size = new System.Drawing.Size(77, 45);
             this.btnCompound.TabIndex = 0;
             this.btnCompound.Text = "Compound Interest";
-            this.btnCompound.UseVisualStyleBackColor = true;
+            this.btnCompound.UseVisualStyleBackColor = false;
             this.btnCompound.Click += new System.EventHandler(this.btnCompound_Click);
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(26, 17);
+            this.label1.Location = new System.Drawing.Point(29, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(193, 23);
             this.label1.TabIndex = 1;
@@ -61,24 +68,36 @@
             // 
             // btnMortgage
             // 
-            this.btnMortgage.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMortgage.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnMortgage.FlatAppearance.BorderSize = 0;
+            this.btnMortgage.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnMortgage.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnMortgage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMortgage.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMortgage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMortgage.Location = new System.Drawing.Point(110, 33);
             this.btnMortgage.Name = "btnMortgage";
             this.btnMortgage.Size = new System.Drawing.Size(77, 45);
             this.btnMortgage.TabIndex = 2;
             this.btnMortgage.Text = "Mortgage";
-            this.btnMortgage.UseVisualStyleBackColor = true;
+            this.btnMortgage.UseVisualStyleBackColor = false;
             this.btnMortgage.Click += new System.EventHandler(this.btnMortgage_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExit.Location = new System.Drawing.Point(87, 164);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // groupBox1
@@ -86,6 +105,7 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Controls.Add(this.btnMortgage);
             this.groupBox1.Controls.Add(this.btnCompound);
+            this.groupBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(21, 57);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(208, 95);
@@ -102,7 +122,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Default";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Financial Advisor";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

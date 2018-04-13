@@ -22,19 +22,14 @@ namespace Financial_Project
 
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            ExitConf frmExit = new ExitConf();
-            frmExit.Show();
-            
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                
-
+                // Sets variables
                 double principal = double.Parse(tbInvest.Text);
                 double interest = double.Parse(tbInterest.Text) / 100;
                 double timesPeryear;
@@ -47,7 +42,8 @@ namespace Financial_Project
 
 
 
-
+                //Conditional statement that sets my timesPeryear variable depending on the text
+                // of the combo box on my form.
 
                 if (cbInstance.Text == "Annually")
                 {
@@ -71,13 +67,17 @@ namespace Financial_Project
                     timesPeryear = 365; Deposits = ((deposits * 12) / 365);
                 }
 
-
+                // This variable retrives my calculation from my method
                 double converted = CompoundInterestCalc.CompoundInterest(principal, interest, timesPeryear, years, deposits);
 
-                this.Size = new Size(366, 455);
+                // Changes the form size.
+                this.Size = new Size(366, 423);
                
+                //Sets text to show the calculation on my label.
                 lblOut.Text = "Your balance after" + " " + tbYears.Text + " " + "years" + " " + "is" + " " + converted.ToString("C");
             }
+
+            // Error handeling
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -107,13 +107,21 @@ namespace Financial_Project
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            // Clears text and prepares the form for a new set of information
             tbContribute.Text = "";
             tbInterest.Text = "";
             tbInvest.Text = "";
             tbYears.Text = "";
             cbInstance.Text = "";
 
-            this.Size = new Size(366, 314);
+            this.Size = new Size(366, 275);
+        }
+
+        private void Compound_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Closes current form and returns to defualt
+            Default frmDefault = new Default();
+            frmDefault.Show();
         }
     }
 }

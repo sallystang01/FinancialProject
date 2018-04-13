@@ -8,5 +8,5 @@ C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial
 C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial Project.csproj.CoreCompileInputs.cache
 C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial Project.exe
 C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial Project.pdb
-C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial_Project.ExitConf.resources
 C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial_Project.Compound.resources
+C:\Data\FinancialProject\Financial Project\Financial Project\obj\Debug\Financial_Project.Mortgage.resources
