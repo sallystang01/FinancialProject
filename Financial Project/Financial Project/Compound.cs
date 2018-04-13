@@ -67,12 +67,25 @@ namespace Financial_Project
                     timesPeryear = 365; Deposits = ((deposits * 12) / 365);
                 }
 
+                // Does not allow 0 years
+                
+
                 // This variable retrives my calculation from my method
                 double converted = CompoundInterestCalc.CompoundInterest(principal, interest, timesPeryear, years, deposits);
 
-                // Changes the form size.
-                this.Size = new Size(366, 423);
-               
+                // If years <= 0, display message box error and maintain current form size.
+                // else, change form size.
+
+                if (years <= 0)
+                {
+                    MessageBox.Show("You cannot compound interest for less than 1 year!");
+                    this.Size = new Size(366, 275);
+                }
+                else
+                {
+                    this.Size = new Size(366, 423);
+                }
+
                 //Sets text to show the calculation on my label.
                 lblOut.Text = "Your balance after" + " " + tbYears.Text + " " + "years" + " " + "is" + " " + converted.ToString("C");
             }

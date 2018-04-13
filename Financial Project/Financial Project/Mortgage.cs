@@ -48,8 +48,21 @@ namespace Financial_Project
                 double totalInterest = MortgageCalc.MortgageInterest(interest, months, principal, down);
                 string payOff = MortgageCalc.MortgageEndDate(startDate, months);
 
+                // If years <= 0, display message box error and maintain current form size.
+                // else, change form size.
+                if (years <= 0)
+                {
+                    MessageBox.Show("You cannot compound interest for less than 1 year!");
+                    this.Size = new Size(369, 310);
+                }
+                else
+                {
+                    this.Size = new Size(723, 310);
+                }
+
+
                 //Setting all the labels text to the calculated results from my methods
-                this.Size = new Size(723, 310);
+               
                 lblOut.Text = "Your estimated monthly payment is" + " " + converted.ToString("c");
                 double totalPayment = (converted * months);
                 lblTotalPayment.Text = "Your total payment is" + " " + totalPayment.ToString("c");
@@ -89,8 +102,25 @@ namespace Financial_Project
         {
             //Takes the input from the calendar and convertes it and palces it into the text box.
             //Then it hides the calendar.
+            //tbStart.Text = mCalendar.SelectionRange.Start.ToShortDateString();
+            
+        }
+
+        private void mCalendar_MouseUp(object sender, MouseEventArgs e)
+        {
+            // Basically keeps the calendar visible until you choose a date
+            switch (mCalendar.HitTest(e.Location).HitArea)
+            {
+                case MonthCalendar.HitArea.Date: break;
+                case MonthCalendar.HitArea.NextMonthDate: break;
+                case MonthCalendar.HitArea.PrevMonthDate: break;
+                default: return;
+            }
+            //Takes the selected date and inputs it into the text box. 
+            // Then it closes the calendar.
             tbStart.Text = mCalendar.SelectionRange.Start.ToShortDateString();
             mCalendar.Visible = false;
         }
     }
-}
+    }
+

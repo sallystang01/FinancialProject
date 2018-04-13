@@ -335,6 +335,7 @@
             this.mCalendar.TabIndex = 44;
             this.mCalendar.Visible = false;
             this.mCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.mCalendar_DateChanged);
+            this.mCalendar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mCalendar_MouseUp);
             // 
             // lblPayoffDate
             // 
